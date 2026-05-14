@@ -1,0 +1,384 @@
+# Python 기초 학습 정리 - Day 1
+
+## 학습 목표
+
+- Python 기본 문법을 직접 손으로 작성할 수 있는 수준 만들기
+- 단순 암기가 아닌 코드 흐름 이해
+- 실무 스타일과 기본 코드 습관 같이 익히기
+- 취업 역량 향상 및 AI 서비스 개발 기본기 준비
+
+---
+
+# 1. 변수 (Variable)
+
+## 개념
+
+데이터를 저장하는 공간.
+
+## 예제
+
+```python
+name = "Kim"
+age = 24
+```
+
+---
+
+# 2. 자료형 (Type)
+
+| 자료형 | 의미 | 예시 |
+|---|---|---|
+| str | 문자열 | "hello" |
+| int | 정수 | 10 |
+| float | 실수 | 3.14 |
+| bool | 참/거짓 | True |
+
+---
+
+# 3. 출력 (print)
+
+## 기본 출력
+
+```python
+print("hello")
+```
+
+## 변수 출력
+
+```python
+name = "Kim"
+print(name)
+```
+
+## 여러 개 출력
+
+```python
+name = "Kim"
+age = 24
+
+print(name, age)
+```
+
+---
+
+# 4. 입력 (input)
+
+## 기본 입력
+
+```python
+name = input("이름 입력: ")
+print(name)
+```
+
+---
+
+# 5. 형변환
+
+## input()는 문자열(str)로 입력됨
+
+```python
+age = input("나이 입력: ")
+```
+
+입력값은 실제로 문자열.
+
+## 숫자로 변환
+
+```python
+age = int(input("나이 입력: "))
+```
+
+---
+
+# 6. 문자열 연결
+
+## 문자열 연결 예제
+
+```python
+name = input("이름: ")
+food = input("좋아하는 음식: ")
+price = input("가격: ")
+
+print(name + "가 좋아하는 음식은 " + food + "\n가격은 " + price + "원")
+```
+
+---
+
+# 7. 줄바꿈 문자
+
+## \n 사용
+
+```python
+print("첫 번째 줄\n두 번째 줄")
+```
+
+---
+
+# 8. 조건문 if
+
+## 기본 구조
+
+```python
+if 조건:
+    실행코드
+```
+
+## 예제
+
+```python
+age = int(input("나이: "))
+
+if age >= 20:
+    print("성인")
+else:
+    print("미성년자")
+```
+
+---
+
+# 9. elif
+
+## 여러 조건 처리
+
+```python
+score = int(input("점수: "))
+
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")
+```
+
+---
+
+# 10. 비교 연산자
+
+| 연산자 | 의미 |
+|---|---|
+| == | 같다 |
+| != | 다르다 |
+| > | 크다 |
+| < | 작다 |
+| >= | 크거나 같다 |
+| <= | 작거나 같다 |
+
+---
+
+# 11. = 와 == 차이
+
+## =
+
+값 저장.
+
+```python
+age = 20
+```
+
+## ==
+
+값 비교.
+
+```python
+age == 20
+```
+
+---
+
+# 12. for 반복문
+
+## 기본 구조
+
+```python
+for 변수 in range(범위):
+    실행코드
+```
+
+## 예제
+
+```python
+for i in range(1, 6):
+    print(i)
+```
+
+---
+
+# 13. range()
+
+## range(5)
+
+```python
+0 1 2 3 4
+```
+
+## range(1, 6)
+
+```python
+1 2 3 4 5
+```
+
+---
+
+# 14. str() 형변환
+
+## 숫자를 문자열로 변환
+
+```python
+for i in range(1, 11):
+    print("숫자: " + str(i))
+```
+
+---
+
+# 15. 나머지 연산자 (%)
+
+## 짝수/홀수 판별
+
+```python
+if i % 2 == 0:
+    print(i, "짝수")
+else:
+    print(i, "홀수")
+```
+
+---
+
+# 16. while 반복문
+
+## 기본 구조
+
+```python
+변수 초기화
+
+while 조건:
+    실행
+    변수 증가
+```
+
+## 예제
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+---
+
+# 17. += 연산자
+
+## 값 증가
+
+```python
+count += 1
+```
+
+의미:
+
+```python
+count = count + 1
+```
+
+---
+
+# 18. Python 인터프리터 개념
+
+Python은 인터프리터 언어.
+
+즉:
+
+```text
+코드를 위에서부터 한 줄씩 읽고 실행
+```
+
+조건문도 위에서부터 검사.
+
+```python
+if:
+elif:
+else:
+```
+
+구조에서는 조건 하나가 만족되면 아래 조건은 검사하지 않음.
+
+---
+
+# 실무 스타일 및 습관
+
+## 추천 스타일
+
+```python
+name = input("이름: ")
+```
+
+## 비추천 스타일
+
+```python
+name=input("이름:")
+```
+
+---
+
+# 현재 단계에서 비추천 문법
+
+아직 사용하지 않는 것이 좋은 문법:
+
+- f-string
+- lambda
+- list comprehension
+- 삼항연산자
+- map/filter
+
+이유:
+
+현재는 코드 흐름 이해와 손코딩 능력이 우선.
+
+---
+
+# 오늘 배운 핵심
+
+- 변수
+- 자료형
+- print()
+- input()
+- int()
+- str()
+- if / elif / else
+- for
+- while
+- range()
+- % 연산자
+- +=
+- 문자열 연결
+- 줄바꿈(\n)
+- 비교 연산자
+- 들여쓰기
+- 콜론(:)
+
+---
+
+# 느낀 점 및 중요 포인트
+
+- Python은 들여쓰기가 매우 중요함
+- if / for / while 뒤에는 반드시 : 사용
+- input()은 문자열로 입력됨
+- 문자열과 숫자는 바로 더할 수 없음
+- 반복문과 조건문은 실제 서비스 개발에서도 핵심
+- 실무에서는 의미 있는 변수명과 가독성이 중요함
+
+---
+
+# 다음 학습 예정
+
+- list
+- 함수(def)
+- break / continue
+- 중첩 반복문
+- 파일 처리
+- JSON
+- FastAPI 기초
